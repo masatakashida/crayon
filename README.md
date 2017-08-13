@@ -22,11 +22,17 @@
 - comming soon!
 * デプロイ
 - comming soon!
+  
+
 
 
 Things you may want to cover:
 
 * Ruby version
+- ruby 2.4.0
+
+* Rails version
+- rails 5.1.1
 
 * System dependencies
 
