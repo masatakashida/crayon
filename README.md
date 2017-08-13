@@ -23,7 +23,11 @@
 * デプロイ
 - comming soon!
   
-
+## Project initiation
+- リポジトリのクローン
+```
+git clone git@github.com:masatakashida/crayon.git
+```
 
 
 Things you may want to cover:
@@ -39,6 +43,7 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
+
 
 * Database initialization
 
