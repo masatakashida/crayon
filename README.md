@@ -22,17 +22,33 @@
 - comming soon!
 * デプロイ
 - comming soon!
+  
+## Project initiation
+- リポジトリのクローン
+```
+git clone git@github.com:masatakashida/crayon.git
+```
 
 
 Things you may want to cover:
 
 * Ruby version
+- ruby 2.4.0
+
+* Rails version
+- rails 5.1.1
 
 * System dependencies
 
 * Configuration
 
 * Database creation
+```
+bundle install
+bundle exec rake db:create
+bundle exec rake db:migrate
+```
+
 
 * Database initialization
 
