@@ -16,6 +16,12 @@
 - 開発が完了したらmasterへPull Pequestを送る
 - Pull Requestがレビューされたらmasterにマージし、その場で本番環境にリリースする
 
+## Features
+
+* アプリケーションサーバー
+- comming soon!
+* デプロイ
+- comming soon!
 
 
 Things you may want to cover:
