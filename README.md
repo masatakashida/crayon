@@ -3,6 +3,15 @@
 ## サービス
 - メッセンジャーアプリ（どんな？）
 
+## 目的
+- メッセンジャーアプリにて〇〇
+
+## 目標
+- 
+
+
+
+
 Things you may want to cover:
 
 * Ruby version
