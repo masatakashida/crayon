@@ -18,10 +18,6 @@
 
 ## Features
 
-* アプリケーションサーバー
-- comming soon!
-* デプロイ
-- comming soon!
   
 ## Project initiation
 - リポジトリのクローン
