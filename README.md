@@ -18,10 +18,6 @@
 
 ## Features
 
-* アプリケーションサーバー
-- comming soon!
-* デプロイ
-- comming soon!
   
 ## Project initiation
 - リポジトリのクローン
@@ -36,7 +32,7 @@ Things you may want to cover:
 - ruby 2.4.0
 
 * Rails version
-- rails 5.1.1
+- rails 5.1.3
 
 * System dependencies
 
