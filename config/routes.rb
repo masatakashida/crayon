@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+# ----------------------
+# about/top page 
+# ----------------------
+
   get 'home/top'
   get 'home/about'
   # rootパス
