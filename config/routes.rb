@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
 
 # ----------------------
-# about/top page 
+# user
+# ----------------------
+
+# ----------------------
+# content 
+# ----------------------
+
+
+
+# ----------------------
+# home/about:top page 
 # ----------------------
 
   get 'home/top'
