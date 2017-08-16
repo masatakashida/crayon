@@ -25,7 +25,6 @@
 git clone git@github.com:masatakashida/crayon.git
 ```
 
-
 Things you may want to cover:
 
 * Ruby version
