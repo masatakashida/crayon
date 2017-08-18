@@ -49,6 +49,8 @@ bundle exec rake db:migrate
 
 * How to run the test suite
 
+* CI as a service
+
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
