@@ -25,6 +25,9 @@
 git clone git@github.com:masatakashida/crayon.git
 ```
 
+## Configuration
+- comming soon!
+
 Things you may want to cover:
 
 * Ruby version
