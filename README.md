@@ -43,7 +43,7 @@ Things you may want to cover:
 
 * Configuration
 
-* Database creation
+* Database creation（まだDB作っていない。）
 ```
 bundle install
 bundle exec rake db:create
