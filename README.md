@@ -26,6 +26,9 @@
 git clone git@github.com:masatakashida/crayon.git
 ```
 
+## Configuration
+- comming soon!
+
 - Gemのインストール
 ```
 bundle install --path vendor/bundle
