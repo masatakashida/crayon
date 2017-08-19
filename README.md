@@ -15,6 +15,7 @@
 - 作成したブランチはローカルマシンにコミットして、リモートリポジトリにも同じ名前のブランチとして定期的にPushする
 - 開発が完了したらmasterへPull Pequestを送る
 - Pull Requestがレビューされたらmasterにマージし、その場で本番環境にリリースする
+- 使わないブランチは削除してください
 
 ## Features
 
@@ -27,6 +28,11 @@ git clone git@github.com:masatakashida/crayon.git
 
 ## Configuration
 - comming soon!
+
+- Gemのインストール
+```
+bundle install --path vendor/bundle
+```
 
 Things you may want to cover:
 
