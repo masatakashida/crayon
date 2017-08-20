@@ -8,7 +8,7 @@ header */
 
 
 /* ----------------------------------------------------
-main */
+section */
 
 #title{
 color: #505050;/*文字色*/
@@ -23,6 +23,46 @@ border-radius: 25px 0px 0px 25px;/*左側の角を丸く*/
 #title:before {
 content: '●';
 color: white;
+}
+
+.description {
+  padding: 5% 10% 0 10%;
+}
+.protect-policy {
+  padding: 1% 10% 0 10%;
+}
+.handling {
+  padding: 5% 10% 0 10%;
+}
+.title{
+  color: blue;
+}
+.list-style-position{
+  list-style-position: inside;
+}
+.list-style-none {
+  list-style: none;
+}
+.enactment-date {
+  padding: 2% 0 0 0;
+}
+.light-gray {
+  color: #999999;
+}
+.gray {
+  color: #666666;
+}
+.list li {
+  padding: 0 0 1% 0;
+}
+.desc-of-handling {
+  padding: 0 0 4% 0;
+}
+.desc-of-handling h3{
+  padding: 0 0 1% 0;
+}
+.profile {
+  padding: 2% 0 0 0;
 }
 
 /* ----------------------------------------------------
