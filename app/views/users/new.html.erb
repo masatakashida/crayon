@@ -1,4 +1,20 @@
-<h1>ユーザーを作成</h1>
+<h1>Sign Up</h1>
 <p>ここからチャットルームに投稿するためのアカウントを作成できるよ！</p>
 
 <p>＊ここに入力フォームを作成</p>
+
+
+
+<section>
+	<div class="container">
+		<div class="col-md">
+			<%= form_for(@user) do |f| %>
+				<%= f.label :name %>
+				<%= f.text_field :name %>
+				<%= f.label :email %>
+				<%= f.text_field :email %>
+				<%= f.submit '登録する' %>
+			<% end %>
+		</div>
+	</div>
+</section>
