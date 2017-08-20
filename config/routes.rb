@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
-  get 'users/new'
+ 
 
 # ----------------------
 # user
 # ----------------------
-
+  resources :users
 # ----------------------
 # content 
 # ----------------------

@@ -5,7 +5,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 # users#new ページに入れるかテスト
 # ----------------------------
   test "should get new" do
-    get users_new_url
+    get new_user_path
     assert_response :success
   end
 
