@@ -59,6 +59,8 @@ bundle exec rake db:migrate
 
 * CI as a service
 
+- Jenkins
+
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
