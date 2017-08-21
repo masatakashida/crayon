@@ -9,7 +9,7 @@
 ## 目標
 - gitを用いたチーム開発ができるようになる。
 
-## 開発フロー(後日詳しく書く)
+## 開発フロー(後日詳しく)
 - github-flow
 - 新しく何かをするときはmasterから直接ブランチを作る
 - 作成したブランチはローカルマシンにコミットして、リモートリポジトリにも同じ名前のブランチとして定期的にPushする
@@ -58,6 +58,8 @@ bundle exec rake db:migrate
 * How to run the test suite
 
 * CI as a service
+
+- Jenkins
 
 * Services (job queues, cache servers, search engines, etc.)
 
