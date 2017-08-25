@@ -62,6 +62,7 @@ bundle exec rake db:migrate
 * CI as a service
 
 - Jenkins
+(テストのやり方再考)
 
 * Services (job queues, cache servers, search engines, etc.)
 
