@@ -17,6 +17,8 @@
 - Pull Requestがレビューされたらmasterにマージし、その場で本番環境にリリースする
 - 使わないブランチは削除してください
 
+## Contents
+
 ## Features
   
 ## Project initiation
