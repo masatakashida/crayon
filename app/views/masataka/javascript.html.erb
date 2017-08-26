@@ -1,21 +1,45 @@
 <h1>Masataka#javascript</h1>
-<p>ここはテストです。</p>
-
-<!-- ボタンクリック後に赤色に変わる -->
-<button id = "button1" onclick="effect()">ボタンを赤にするよ</button>
-<script type="text/javascript">
-	
-function effect(){
-	var button1 = document.getElementById("button1")
-	button1.style.backgroundColor = "red"
-}
-
-</script>
-
+<p id="text1" onclick="test()">ここはテストです。</p>
 
 <!-- Vue.js （vueのインストールが必要）-->
 <div id="app">
   {{ message }}
 </div>
 
-　
+
+<!-- ボタンクリック後に赤色に変わる -->
+<button id = "button1" onclick="effect()">ボタンを赤にするよ</button>
+
+
+
+
+
+
+<!-- JavaScript -->
+<script type="text/javascript">
+
+// 今が午前か午後かを表示するー比較演算子
+var now = new Date();
+var hour = now.getHours();
+
+if (hour < 12) {
+	window.alert('今は午前' + hour + '時です！');
+} else {
+	window.alert('今は午後' + hour + '時です！');
+}
+	
+// ボタン赤色に変化
+function effect(){
+	var button1 = document.getElementById("button1")
+	button1.style.backgroundColor = "red"
+}
+
+// 文言クリックでHTML,CSS変化
+function test(){
+	var text1 = document.getElementById("text1")
+	//text1.style.backgroundColor = "blue"
+	text1.textContent = "ボタンを押したな！バレバレだぞ！"
+	text1.style.fontSize = "50px"
+}
+
+</script>
