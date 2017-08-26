@@ -1,6 +1,13 @@
 class MasatakaController < ApplicationController
-	layout 'masataka'
+  layout 'masataka'
+  
   def javascript
-
   end
+
+  def css
+  end
+
+  def html
+  end
+
 end
