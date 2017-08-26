@@ -15,11 +15,18 @@
 
 
 
-
-
-
 <!-- JavaScript -->
 <script type="text/javascript">
+
+// 今が午前か午後かを表示するー比較演算子
+var now = new Date();
+var hour = now.getHours();
+
+if (hour < 12) {
+	window.alert('今は午前' + hour + '時です！');
+} else {
+	window.alert('今は午後' + hour + '時です！');
+}
 	
 // ボタン赤色に変化
 function effect(){
