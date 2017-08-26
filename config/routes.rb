@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
  
 
+  get 'masataka/javascript'
+
 # ----------------------
 # user
 # ----------------------
