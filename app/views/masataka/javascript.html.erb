@@ -11,20 +11,28 @@
 <button id = "button1" onclick="effect()">ボタンを赤にするよ</button>
 
 
+
+
+
+
+
+
+
 <!-- JavaScript -->
 <script type="text/javascript">
 	
+// ボタン赤色に変化
 function effect(){
 	var button1 = document.getElementById("button1")
 	button1.style.backgroundColor = "red"
 }
 
+// 文言クリックでHTML,CSS変化
 function test(){
 	var text1 = document.getElementById("text1")
-	text1.style.backgroundColor = "blue"
+	//text1.style.backgroundColor = "blue"
+	text1.textContent = "ボタンを押したな！バレバレだぞ！"
+	text1.style.fontSize = "50px"
 }
 
 </script>
-
-
- 
