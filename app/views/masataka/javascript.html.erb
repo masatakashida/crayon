@@ -1,8 +1,17 @@
 <h1>Masataka#javascript</h1>
-<p>ここはテストです。</p>
+<p id="text1" onclick="test()">ここはテストです。</p>
+
+<!-- Vue.js （vueのインストールが必要）-->
+<div id="app">
+  {{ message }}
+</div>
+
 
 <!-- ボタンクリック後に赤色に変わる -->
 <button id = "button1" onclick="effect()">ボタンを赤にするよ</button>
+
+
+<!-- JavaScript -->
 <script type="text/javascript">
 	
 function effect(){
@@ -10,12 +19,12 @@ function effect(){
 	button1.style.backgroundColor = "red"
 }
 
+function test(){
+	var text1 = document.getElementById("text1")
+	text1.style.backgroundColor = "blue"
+}
+
 </script>
 
 
-<!-- Vue.js （vueのインストールが必要）-->
-<div id="app">
-  {{ message }}
-</div>
-
-　
+ 
