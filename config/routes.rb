@@ -1,17 +1,24 @@
 Rails.application.routes.draw do
 
- 
+
+# ----------------------
+# masataka////
+# ----------------------
 
   get 'masataka/javascript'
+  get 'masataka/css'
+  get 'masataka/html'
+
 
 # ----------------------
 # user
 # ----------------------
+
   resources :users
+
 # ----------------------
 # content 
 # ----------------------
-
 
 
 # ----------------------
