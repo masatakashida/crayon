@@ -1,6 +1,10 @@
 <h1>Masataka#javascript</h1>
 <p id="text1" onclick="test()">ここはテストです。</p>
 
+<div id="news">
+	<p>このページをみたら連絡をくださいね！</p>
+</div>
+
 <!-- Vue.js （vueのインストールが必要）-->
 <div id="app">
   {{ message }}
@@ -15,7 +19,11 @@
 
 
 
+
+
+
 <!-- JavaScript -->
+<script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
 
 // 今が午前か午後かを表示するー比較演算子
@@ -41,5 +49,22 @@ function test(){
 	text1.textContent = "ボタンを押したな！バレバレだぞ！"
 	text1.style.fontSize = "50px"
 }
+
+$('#news')
+	.css({
+		'top': '-100px'
+	})
+	.animate({
+		'top': '40px'
+	})
+	.animate({
+		'top': '30px'
+	}, 500)
+	.delay(3000)
+	.fadeOut('show')
+	.bind('click', function(){
+		$(this).stop(true, false).fadeOut('show');
+	})
+
 
 </script>
