@@ -1,3 +1,16 @@
 // Place all the styles related to the masataka controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#news {
+	width: 300px;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	background-color: #ffc2d7;
+	padding: 15px;
+	position: absolute;
+	left: 210px;
+	top: 30px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5)
+}
