@@ -6,4 +6,9 @@ class MasatakaControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get css" do
+  	get masataka_css_url
+  	assert_response :success
+  end
+
 end
