@@ -4,7 +4,16 @@ lock "3.9.0"
 set :application, "crayon"
 set :repo_url, "git@github.com:masatakashida/crayon.git"
 
+set :user	  ,'deploy'
+set :rbenv_type   ,:deploy
+set :rbenv_ruby   ,'2.4.1'
+
+set :stages       , %w(production staging)
+set :default_stage, 'production'
+
 set :keep_releases, 3 ## 最大３世代まで保持
+
+set :bundle_binstubs, nil
 
 set :linked_dirs  ,%w{ log tmp/pids tmp/cache tmp/sockets }
 
