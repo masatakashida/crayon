@@ -1,3 +1,29 @@
+set :deploy_to    ,'/home/deploy/crayon' # deploy先の設定
+# set :unicorn_pid  ,"#{shared_path}/tmp/pids/unicorn.pid" # unicorn pidの位置
+
+server '160.16.78.24', user: 'crayon', roles: %w{web app batch api db}
+
+# linked to file
+#set :linked_files, %w{ config/database.yml }
+set :rails_env, 'production'
+set :migration_role, 'db'
+
+# ------------------------------------
+# unicorn_rails
+# ------------------------------------
+
+set :unicorn_pid, "#{shared_path}/tmp/pids/unicorn.pid"
+
+namespace :deploy do
+  puts 'ーーーーー本番環境の deployを開始しますーーーーー'
+
+  # messageはここでputsする。
+  after :finished, :log_revision do
+    puts 'ーーーーー本番環境の deployが完了しましたーーーーー'
+  end
+end
+
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
