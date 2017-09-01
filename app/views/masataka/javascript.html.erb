@@ -1,6 +1,35 @@
 <h1>Masataka#javascript</h1>
 <p id="text1" onclick="test()">ここはテストです。</p>
 
+<!-- スマホメニュー -->
+<div class="warpper">
+<header>
+  <h1 class="ttl">
+    <a href="kishiken.com">スマホメニュー</a>
+  </h1>
+  <div class="button-toggle">&#9776;
+  </div>
+  <nav class="menu">
+    <ul>
+      <li><a href="">COLLECTION</a></li>
+      <li><a href="">Forever コレクション</a></li>
+      <li><a href="">DEAREST コレクション</a></li>
+      <li><a href="">menu3</a></li>
+      <li><a href="">menu4</a></li>
+      <li><a href="">menu5</a></li>
+    </ul>
+  </nav>
+</header>
+<section>
+  <p>コンテンツ</p>
+  <p>コンテンツ</p>
+  <p>コンテンツ</p>
+</section>
+</div>
+</div>
+
+
+
 <div id="news">
 	<p>このページをみたら連絡をくださいね！</p>
 </div>
@@ -14,8 +43,22 @@
 <!-- ボタンクリック後に赤色に変わる -->
 <button id = "button1" onclick="effect()">ボタンを赤にするよ</button>
 
+<!-- アコーディオンメニュー -->
+<h3 class="open_h3 btn-2">BRAND INFO（クリックで開閉するアコーディオンメニュー）</h3>
+<p class="info open-2" style="height: 120px; display: block;">1913年に創業者のマリオ・プラダと兄弟によりインポートショップをオープン。世界中の素材や高品質な革を集め、イタリアの技術を投入したアイテムが有名に。1978年に孫娘のミウッチャ・プラダがオーナー兼デザイナーに就任。その後、マリオの使用していたナイロン地“ポコノ”に目を向け、レザーと併用したバッグが大ヒット。逆三角形のロゴプレートが一世を風靡したのは最近の記憶にも新しい。以来、PRADAはクリスマス時のシーズンアイテムや、上質なレザーを使用したSAFFIANOシリーズ等のブランドの代名詞と言われるアイテムを生み出した。近年では、映画への衣装提供・モバイル発売・車のデザイン等、服飾だけでなく様々な分野にも進出し、前進しつづけるブランド。</p>
 
-
+<!-- 開閉できるツールボックス -->
+<div id="toolBox">
+	<p id="toolTitle"><a href="#toolContent">ファイル</a></p>
+	<div id="toolContent">
+		<ul>
+			<li>新規</li>
+			<li>上書き保存</li>
+			<li>名前をつけて保存</li>
+			<li>とじる</li>
+		</ul>
+	</div>
+</div>
 
 
 
@@ -27,6 +70,7 @@
 <script type="text/javascript">
 
 // 今が午前か午後かを表示するー比較演算子
+/*
 var now = new Date();
 var hour = now.getHours();
 
@@ -34,13 +78,13 @@ if (hour < 12) {
 	window.alert('今は午前' + hour + '時です！');
 } else {
 	window.alert('今は午後' + hour + '時です！');
-}
-	
+};
+	*/
 // ボタン赤色に変化
 function effect(){
 	var button1 = document.getElementById("button1")
 	button1.style.backgroundColor = "red"
-}
+};
 
 // 文言クリックでHTML,CSS変化
 function test(){
@@ -48,7 +92,7 @@ function test(){
 	//text1.style.backgroundColor = "blue"
 	text1.textContent = "ボタンを押したな！バレバレだぞ！"
 	text1.style.fontSize = "50px"
-}
+};
 
 $('#news')
 	.css({
@@ -64,7 +108,40 @@ $('#news')
 	.fadeOut('show')
 	.bind('click', function(){
 		$(this).stop(true, false).fadeOut('show');
-	})
+	});
 
+//// クリックで開閉するアコーディオンメニュー
+//高さ指定
+$('.open-2').each(function(){
+    $(this).css("height",$(this).height()+"px");
+});
+//開閉要素を隠す
+$('.open-2').hide();
+//ボタン要素が押されたら
+$('.btn-2').click(function () {
+	//現在の状況に合わせて開閉
+    $('.open-2').slideToggle('slow');
+    //現在の状況に合わせてクラスをつける
+    $(this).toggleClass('active');
+});
+
+// <!-- スマホメニュー -->
+$(function(){
+  $(".menu").css("display","none");
+  $(".button-toggle").on("click", function() {
+    $(".menu").slideToggle();
+    $(this).toggleClass("active");
+  });
+});
+
+// 開閉できるツールボックス
+/*$('#toolContent').hide();
+$('#toolTitle').bind('click', function(){
+	if ($('#toolContent').css('display') === 'none'){
+		$('#toolContent').slideDown();
+	}else {
+		$('#toolContent').slideUp();
+	}
+});*/
 
 </script>
