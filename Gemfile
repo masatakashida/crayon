@@ -56,3 +56,12 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Unicorn
 gem 'unicorn'
+
+# capistrano
+group :development do
+  gem "capistrano", "~> 3.9"
+end
+
+
+
+
