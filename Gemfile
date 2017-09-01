@@ -56,6 +56,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Unicorn
 gem 'unicorn'
+gem 'unicorn-worker-killer'
 gem 'dalli'
 
 # capistrano
