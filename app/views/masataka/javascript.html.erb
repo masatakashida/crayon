@@ -15,7 +15,18 @@
 <button id = "button1" onclick="effect()">ボタンを赤にするよ</button>
 
 
-
+<!-- 開閉できるツールボックス -->
+<div id="toolBox">
+	<p id="toolTitle"><a href="#toolContent">ファイル</a></p>
+	<div id="toolContent">
+		<ul>
+			<li>新規</li>
+			<li>上書き保存</li>
+			<li>名前をつけて保存</li>
+			<li>とじる</li>
+		</ul>
+	</div>
+</div>
 
 
 
@@ -34,7 +45,7 @@ if (hour < 12) {
 	window.alert('今は午前' + hour + '時です！');
 } else {
 	window.alert('今は午後' + hour + '時です！');
-}
+};
 	
 // ボタン赤色に変化
 function effect(){
@@ -64,7 +75,17 @@ $('#news')
 	.fadeOut('show')
 	.bind('click', function(){
 		$(this).stop(true, false).fadeOut('show');
-	})
+	});
 
+
+// 開閉できるツールボックス
+/*$('#toolContent').hide();
+$('#toolTitle').bind('click', function(){
+	if ($('#toolContent').css('display') === 'none'){
+		$('#toolContent').slideDown();
+	}else {
+		$('#toolContent').slideUp();
+	}
+});*/
 
 </script>
