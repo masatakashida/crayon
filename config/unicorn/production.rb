@@ -3,8 +3,7 @@ WORKING_DIR = "/home/deploy/crayon/current"
 worker_processes 2 # ワーカプロセス数
 working_directory "#{WORKING_DIR}"
 
-#listen "/var/run/nginx-rails.sock" # ソケットファイル
-#listen 8080
+listen 8080
 listen "#{WORKING_DIR}/tmp/sockets/unicorn.sock"
 
 pid    "tmp/pids/unicorn.pid"  # pidファイル
