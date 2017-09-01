@@ -1,7 +1,7 @@
 set :deploy_to    ,'/home/deploy/crayon' # deploy先の設定
 # set :unicorn_pid  ,"#{shared_path}/tmp/pids/unicorn.pid" # unicorn pidの位置
 
-server '160.16.78.24', user: 'crayon', roles: %w{web app batch api db}
+server '160.16.78.24', user: 'deploy', roles: %w{web app batch api db}
 
 # linked to file
 #set :linked_files, %w{ config/database.yml }
