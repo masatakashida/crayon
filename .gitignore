@@ -32,4 +32,4 @@ doc/
 .project
 .DS_Store
 .idea
-.secret
+.secretconfig/database.yml

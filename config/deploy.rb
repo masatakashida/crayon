@@ -1,8 +1,12 @@
 # config valid only for current version of Capistrano
 lock "3.9.0"
 
-set :application, "my_app_name"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :application, "crayon"
+set :repo_url, "git@github.com:masatakashida/crayon.git"
+
+set :keep_releases, 3 ## 最大３世代まで保持
+
+set :linked_dirs  ,%w{ log tmp/pids tmp/cache tmp/sockets }
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
