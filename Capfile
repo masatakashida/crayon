@@ -15,6 +15,12 @@ require "capistrano/deploy"
 require "capistrano/scm/git"
 install_plugin Capistrano::SCM::Git
 
+require "capistrano/rbenv"
+require "capistrano/bundler"
+require "capistrano/rails/assets"
+require "capistrano/rails/migrations"
+require 'capistrano3/unicorn' # unicornを使っている場合 記載する。
+
 # Include tasks from other gems included in your Gemfile
 #
 # For documentation on these, see for example:
