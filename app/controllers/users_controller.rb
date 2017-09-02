@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  
+  layout 'crayon'
   # ---------------------
   # テストコード書いてない
   # ---------------------

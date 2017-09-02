@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+  layout 'crayon'
+
   def top
   end
 
