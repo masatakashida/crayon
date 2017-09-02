@@ -20,6 +20,14 @@
 ## Contents
 
 ## Features
+
+### アプリケーションサーバー
+
+- unicorn
+
+### デプロイ
+
+- capistrano
   
 ## Project initiation
 - リポジトリのクローン
@@ -62,10 +70,13 @@ bundle exec rake db:migrate
 * CI as a service
 
 - Jenkins
-(テストのやり方再考)
 
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
+
+```
+bundle exec cap production deploy
+```
 
 * ...
