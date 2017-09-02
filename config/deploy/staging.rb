@@ -1,5 +1,6 @@
 set :deploy_to    ,'/home/deploy/crayon' # deploy先の設定
 # set :unicorn_pid  ,"#{shared_path}/tmp/pids/unicorn.pid" # unicorn pidの位置
+set :stage, :staging
 set :branch,  'develop'
 
 server 'staging.160.16.78.24', user: 'deploy', roles: %w{web app batch api db}
