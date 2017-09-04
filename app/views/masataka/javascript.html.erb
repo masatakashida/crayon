@@ -8,9 +8,9 @@
 </div>
 
 <!-- Vue.js （vueのインストールが必要）-->
-<div id="app">
-  {{ message }}
-</div>
+
+<!-- クリックで変化 -->
+<div class="button-toggle" id="button-toggle" onclick="button()">&#9776;</div>
 
 
 <!-- ボタンクリック後に赤色に変わる -->
@@ -52,6 +52,13 @@ function test(){
 	//text1.style.backgroundColor = "blue"
 	text1.textContent = "ボタンを押したな！バレバレだぞ！"
 	text1.style.fontSize = "50px"
+};
+
+// ボタンクリックで新たなボタンを出す
+function button(){
+	var button = document.getElementById("button-toggle")
+	//text1.style.backgroundColor = "blue"
+	button.textContent = "ボタンを押したな！バレバレだぞ！"
 };
 
 $('#news')
