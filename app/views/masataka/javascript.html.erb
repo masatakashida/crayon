@@ -12,11 +12,11 @@
 <h2>Vue.js</h2>　
 <div id="msg">
 	<p>{{ message }}</p>
-	<input type="text" v-model="message">
+	<p v-html="message"></p>
+	<input type="text" v-model="text1">
+	<input type="button" v-on:click="doAction" value="click">
 	<!-- v-model="message"といのは、「View Modelに保存されているすべての値の中からmessageというものを探し、それをこのコントロールに設定する」ということを示す -->
-</div>
-
-　
+</div>　
 
 
 <hr>
@@ -111,7 +111,14 @@ function initial(){
 	new Vue({
 		el: '#msg',
 		data: {
-			message: 'this is Vue.js sample!'
+			message: 'this is Vue.js sample!',
+			text1: ''
+		} ,
+		methods: {
+			doAction: function(){
+				var str = this.text1;
+				this.message = 'you typed: <span style="color:white; background:red"> ' + str + '</span>.' ;
+			} 
 		}
 	})
 }
