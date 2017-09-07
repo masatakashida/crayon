@@ -1,20 +1,33 @@
 <h1>Masataka#javascript</h1>
 <p id="text1" onclick="test()">ここはテストです。</p>
 
-
+<hr>
 
 <div id="news">
 	<p>このページをみたら連絡をくださいね！</p>
 </div>
 
 <!-- Vue.js （vueのインストールが必要）-->
-<div id="app">
-  {{ message }}
+ 
+<h2>Vue.js</h2>　
+<div id="msg">
+	<p>{{ message }}</p>
+	<input type="text" v-model="message">
+	<!-- v-model="message"といのは、「View Modelに保存されているすべての値の中からmessageというものを探し、それをこのコントロールに設定する」ということを示す -->
 </div>
+
+　
+
+
+<hr>
+<!-- クリックで変化 -->
+<div class="button-toggle" id="button-toggle" onclick="button()">&#9776;</div>
 
 
 <!-- ボタンクリック後に赤色に変わる -->
 <button id = "button1" onclick="effect()">ボタンを赤にするよ</button>
+
+<hr>
 
 <!-- アコーディオンメニュー -->
 <h3 class="open_h3 btn-2">BRAND INFO（クリックで開閉するアコーディオンメニュー）</h3>
@@ -23,7 +36,7 @@
 
 
 
-
+<hr>
 
 <!-- JavaScript -->
 <script type="text/javascript" src="js/jquery.js"></script>
@@ -52,6 +65,12 @@ function test(){
 	//text1.style.backgroundColor = "blue"
 	text1.textContent = "ボタンを押したな！バレバレだぞ！"
 	text1.style.fontSize = "50px"
+};
+
+// ボタンクリックで新たなボタンを出す
+function button(){
+	var button = document.getElementById("button-toggle")
+	button.innerHTML = "&times;"
 };
 
 $('#news')
@@ -84,6 +103,18 @@ $('.btn-2').click(function () {
     //現在の状況に合わせてクラスをつける
     $(this).toggleClass('active');
 });
+
+
+// Vue.js
+function initial(){
+
+	new Vue({
+		el: '#msg',
+		data: {
+			message: 'this is Vue.js sample!'
+		}
+	})
+}
 
 
 </script>
