@@ -7,26 +7,21 @@
 	<p>このページをみたら連絡をくださいね！</p>
 </div>
 
-<!-- Vue.js -->
+<!-- Vue.js マウスオーバー編-->
  
-<h2>Vue.js</h2>
+<h2>Vue.js マウスオーバー編</h2>
 <div id="msg">
 <ul>
-	<li v-on:mouseenter="change0();" v-on:mouseleave="change0();" v-model="flg0">MISSION</li>
-	<li v-on:mouseover="change1();" v-on:mouseleave="change1();"  v-model="flg1">NEWS & EVENT</li>
-	<li v-on:mouseover="change2();" v-on:mouseleave="change2();"  v-model="flg2">SHOP LIST</li>
-	<li v-on:mouseover="change3();" v-on:mouseleave="change3();"  v-model="flg3">SOCIAL MEDIA</li>
-	<li v-on:mouseover="change4();" v-on:mouseleave="change4();"  v-model="flg4">COMPANY</li>
-	<li v-on:mouseover="change5();" v-on:mouseleave="change5();"  v-model="flg5">CONTACT</li>
+	<li v-on:click="change0();" v-model="flg0">MISSION</li>
+	<li v-on:click="change1();" v-model="flg1">COMPANY</li>
 </ul>
 
 <p v-if="flg">マウスオーバーしていないとき</p>
 <p v-if="flg0">MISSIONだよ</p>
-<p v-if="flg1">NEWS & EVENT</p>
-<p v-if="flg2">SHOP LIST</p>
-<p v-if="flg3">SOCIAL MEDIA</p>
-<p v-if="flg4">COMPANY</p>
-<p v-if="flg5">CONTACT</p>
+<p v-if="flg1">COMPANY</p>
+ 
+
+
 
 
 
@@ -124,40 +119,21 @@ function initial(){
 		data: {
 			flg:true,
 	 		flg0:false,
-	 		flg1:false,
-	 		flg2:false, 
-	 		flg3:false,
-	 		flg4:false,
-	 		flg5:false
 		} ,
+		// クリック時に各プロパティ名をtrue or falseへ変更
 		methods: {
 			change0: function(){
-				this.flg0 = !this.flg0;
-				this.flg = !this.flg;
+				this.flg1 = false;
+				this.flg0 = true;
+				this.flg = false;
 			} ,
 			change1: function(){
-				this.flg1 = !this.flg1;
-				this.flg = !this.flg;
-			} ,
-			change2: function(){
-				this.flg2 = !this.flg2;
-				this.flg = !this.flg;
-			} ,
-			change3: function(){
-				this.flg3 = !this.flg3;
-				this.flg = !this.flg;
-			} ,
-			change4: function(){
-				this.flg4 = !this.flg4;
-				this.flg = !this.flg;
-			} ,
-			change5: function(){
-				this.flg5 = !this.flg5;
-				
+				this.flg0 = false;
+				this.flg1 = true;
+				this.flg = false;
 			}
 		}
 	})
 }
-
 
 </script>
