@@ -7,15 +7,27 @@
 	<p>このページをみたら連絡をくださいね！</p>
 </div>
 
-<!-- Vue.js （vueのインストールが必要）-->
+<!-- Vue.js -->
  
-<h2>Vue.js</h2>　
+<h2>Vue.js</h2>
 <div id="msg">
-	<p>{{ message.toString() }}</p>
-	<input type="text" v-model="text1">
-	<input type="button" v-on:click="doAction" value="click">
-	<!-- v-model="message"といのは、「View Modelに保存されているすべての値の中からmessageというものを探し、それをこのコントロールに設定する」ということを示す -->
-</div>　
+<p v-if="flg">MISSIONだよ</p>
+<p v-if="flg1">News & Event だよ</p>
+<p v-if="flg2">SHOP</p>
+<p v-if="flg3">SOCIAL</p>
+<p v-if="flg4">COMPANY</p>
+<p v-if="flg5">CONTACT</p>
+<ul>
+	<li v-on:click="change();" v-model="flg">MISSION</li>
+	<li v-on:click="change1();" v-model="flg1">NEWS & EVENT</li>
+	<li v-on:click="change2();" v-model="flg2">SHOP LIST</li>
+	<li v-on:click="change3();" v-model="flg3">SOCIAL MEDIA</li>
+	<li v-on:click="change4();" v-model="flg4">COMPANY</li>
+	<li v-on:click="change5();" v-model="flg5">CONTACT</li>
+</ul>
+ 
+
+
 
 
 <hr>
@@ -110,19 +122,32 @@ function initial(){
 	new Vue({
 		el: '#msg',
 		data: {
-			msgArray:[],
-			message: '',
-			text1: ''
-		} ,
-		created: function(){
-			this.msgArray.push('sample message.');
-			this.message = this.msgArray;
+	 		flg:false,
+	 		flg1:false,
+	 		flg2:false,
+	 		flg3:false,
+	 		flg4:false,
+	 		flg5:false
 		} ,
 		methods: {
-			doAction: function(){
-				this.msgArray.push(this.text1);
-				this.message = this.msgArray;
-			} 
+			change: function(){
+				this.flg = !this.flg;
+			} ,
+			change1: function(){
+				this.flg1 = !this.flg1;
+			} ,
+			change2: function(){
+				this.flg2 = !this.flg2;
+			} ,
+			change3: function(){
+				this.flg3 = !this.flg3;
+			} ,
+			change4: function(){
+				this.flg4 = !this.flg4;
+			} ,
+			change5: function(){
+				this.flg5 = !this.flg5;
+			}
 		}
 	})
 }
