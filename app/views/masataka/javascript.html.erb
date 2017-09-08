@@ -7,16 +7,22 @@
 	<p>このページをみたら連絡をくださいね！</p>
 </div>
 
-<!-- Vue.js （vueのインストールが必要）-->
+<!-- Vue.js マウスオーバー編-->
  
-<h2>Vue.js</h2>　
+<h2>Vue.js マウスオーバー編</h2>
 <div id="msg">
-	<p>{{ message }}</p>
-	<p v-html="message"></p>
-	<input type="text" v-model="text1">
-	<input type="button" v-on:click="doAction" value="click">
-	<!-- v-model="message"といのは、「View Modelに保存されているすべての値の中からmessageというものを探し、それをこのコントロールに設定する」ということを示す -->
-</div>　
+<ul>
+	<li v-on:click="change0();" v-model="flg0">MISSION</li>
+	<li v-on:click="change1();" v-model="flg1">COMPANY</li>
+</ul>
+
+<p v-if="flg">マウスオーバーしていないとき</p>
+<p v-if="flg0">MISSIONだよ</p>
+<p v-if="flg1">COMPANY</p>
+ 
+
+
+
 
 
 <hr>
@@ -111,17 +117,23 @@ function initial(){
 	new Vue({
 		el: '#msg',
 		data: {
-			message: 'this is Vue.js sample!',
-			text1: ''
+			flg:true,
+	 		flg0:false,
 		} ,
+		// クリック時に各プロパティ名をtrue or falseへ変更
 		methods: {
-			doAction: function(){
-				var str = this.text1;
-				this.message = 'you typed: <span style="color:white; background:red"> ' + str + '</span>.' ;
-			} 
+			change0: function(){
+				this.flg1 = false;
+				this.flg0 = true;
+				this.flg = false;
+			} ,
+			change1: function(){
+				this.flg0 = false;
+				this.flg1 = true;
+				this.flg = false;
+			}
 		}
 	})
 }
-
 
 </script>
