@@ -2,6 +2,7 @@
   "name": "crayon",
   "private": true,
   "dependencies": {
-    "vue": "^2.4.2"
+    "vue": "^2.4.2",
+    "zoomove": "^1.2.1"
   }
 }
