@@ -1,5 +1,5 @@
 <h1>Masataka#javascript</h1>
-<p id="text1" onclick="test()">ここはテストです。</p>
+<p id="text1" onclick="test()">ここはテストです。クリックしてはいけません。</p>
 
 <hr>
 
@@ -8,7 +8,12 @@
 </div>
 
 <!-- hover sample -->
+<h3 class="hover">hover sample</h3>
 
+<div class="launch">マウスをここに持ってこないでね</div>
+
+
+<hr>
 
 <!-- Vue.js マウスオーバー編-->
  
@@ -136,5 +141,21 @@ function initial(){
 	})
 }
 
+$(function() {
+ 
+  //マウスを乗せたら発動
+  $('.launch').hover(function() {
+ 
+    //マウスを乗せたら色が変わる
+    $('.hover').css('color', 'red');
+ 
+  //ここにはマウスを離したときの動作を記述
+  }, function() {
+ 
+    //色指定を空欄にすれば元の色に戻る
+    $('.hover').css('color', '');
+ 
+  });
+});
 
 </script>
