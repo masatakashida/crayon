@@ -7,9 +7,20 @@
 	<p>このページをみたら連絡をくださいね！</p>
 </div>
 
+
+<!-- jQuery plugin ZooMove -->
+<h3>マウスオーバー</h3>
+<!-- Rails推奨の方 -->
+<%= image_tag '11.jpg', :width => '200' %>
+
+<hr>
+<h3>マウスオーバーする</h3>
+
+<hr>
+
 <!-- Vue.js マウスオーバー編-->
  
-<h2>Vue.js マウスオーバー編</h2>
+<h2>Vue.js クリックで切り替わり編</h2>
 <div id="msg">
 <ul>
 	<li v-on:click="change0();" v-model="flg0">MISSION</li>
@@ -35,17 +46,14 @@
 
 <hr>
 
-<!-- アコーディオンメニュー -->
-<h3 class="open_h3 btn-2">BRAND INFO（クリックで開閉するアコーディオンメニュー）</h3>
-<p class="info open-2" style="height: 120px; display: block;">1913年に創業者のマリオ・プラダと兄弟によりインポートショップをオープン。世界中の素材や高品質な革を集め、イタリアの技術を投入したアイテムが有名に。1978年に孫娘のミウッチャ・プラダがオーナー兼デザイナーに就任。その後、マリオの使用していたナイロン地“ポコノ”に目を向け、レザーと併用したバッグが大ヒット。逆三角形のロゴプレートが一世を風靡したのは最近の記憶にも新しい。以来、PRADAはクリスマス時のシーズンアイテムや、上質なレザーを使用したSAFFIANOシリーズ等のブランドの代名詞と言われるアイテムを生み出した。近年では、映画への衣装提供・モバイル発売・車のデザイン等、服飾だけでなく様々な分野にも進出し、前進しつづけるブランド。</p>
-
-
-
 
 <hr>
 
+
+
+
+
 <!-- JavaScript -->
-<script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
 
 // 今が午前か午後かを表示するー比較演算子
@@ -78,6 +86,7 @@ function button(){
 	var button = document.getElementById("button-toggle")
 	button.innerHTML = "&times;"
 };
+
 
 $('#news')
 	.css({
@@ -135,5 +144,6 @@ function initial(){
 		}
 	})
 }
+
 
 </script>
