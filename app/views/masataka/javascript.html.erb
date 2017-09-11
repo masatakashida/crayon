@@ -1,5 +1,5 @@
 <h1>Masataka#javascript</h1>
-<p id="text1" onclick="test()">ここはテストです。</p>
+<p id="text1" onclick="test()">ここはテストです。クリックしてはいけません。</p>
 
 <hr>
 
@@ -7,14 +7,11 @@
 	<p>このページをみたら連絡をくださいね！</p>
 </div>
 
+<!-- hover sample -->
+<h3 class="hover">hover sample</h3>
 
-<!-- jQuery plugin ZooMove -->
-<h3>マウスオーバー</h3>
-<!-- Rails推奨の方 -->
-<%= image_tag '11.jpg', :width => '200' %>
+<div class="launch">マウスをここに持ってこないでね</div>
 
-<hr>
-<h3>マウスオーバーする</h3>
 
 <hr>
 
@@ -31,7 +28,6 @@
 <p v-if="flg0">MISSIONだよ</p>
 <p v-if="flg1">COMPANY</p>
  
-
 
 
 
@@ -145,5 +141,21 @@ function initial(){
 	})
 }
 
+$(function() {
+ 
+  //マウスを乗せたら発動
+  $('.launch').hover(function() {
+ 
+    //マウスを乗せたら色が変わる
+    $('.hover').css('color', 'red');
+ 
+  //ここにはマウスを離したときの動作を記述
+  }, function() {
+ 
+    //色指定を空欄にすれば元の色に戻る
+    $('.hover').css('color', '');
+ 
+  });
+});
 
 </script>
