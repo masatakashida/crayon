@@ -30,8 +30,8 @@ Content is clipped and scrolling is added only when necessary.
 <div id="msg">
 <ul>
 	<li v-on:click="change0(); colorA();" v-model="flg0" v-bind:class="{'a':isA}">MISSION</li>
-	<li v-on:click="change1();" v-model="flg1">COMPANY</li>
-	<li v-on:click="change2();" v-model="flg2">NEWS</li>
+	<li v-on:click="change1(); colorB();" v-model="flg1" v-bind:class="{'a':isB}">COMPANY</li>
+	<li v-on:click="change2(); colorC();" v-model="flg2" v-bind:class="{'a':isC}">NEWS</li>
 </ul>
 
 <p v-if="flg">マウスオーバーしていないとき</p>
@@ -149,22 +149,28 @@ function initial(){
 				this.flg0 = true;
 				this.flg = false;
 				this.flg2 = false;
+				this.isA = true;
+				this.isB = false;
+				this.isC = false;
 			} ,
 			change1: function(){
 				this.flg0 = false;
 				this.flg1 = true;
 				this.flg = false;
 				this.flg2 = false;
+				this.isA = false;
+				this.isB = true;
+				this.isC = false;
 			} ,
 			change2: function(){
 				this.flg1 = false;
 				this.flg0 = false;
 				this.flg = false;
 				this.flg2 = true;
-			} ,
-			colorA: function(){
-				this.isA = !this.isA;
-			}
+				this.isA = false;
+				this.isB = false;
+				this.isC = true;
+			} 
 		}
 	})
 }
