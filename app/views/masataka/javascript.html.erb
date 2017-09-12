@@ -7,6 +7,15 @@
 	<p>このページをみたら連絡をくださいね！</p>
 </div>
 
+<!-- overflow-y -->
+<p class="sample4">
+<b>auto:スクロールできます！</b><br>
+ブラウザに依存します（一般的にはスクロールして見られるようになります）。<br>
+Content is clipped and scrolling is added only when necessary.
+</p>
+
+
+<hr>
 <!-- hover sample -->
 <h3 class="hover">hover sample</h3>
 
@@ -20,13 +29,15 @@
 <h2>Vue.js クリックで切り替わり編</h2>
 <div id="msg">
 <ul>
-	<li v-on:click="change0();" v-model="flg0">MISSION</li>
-	<li v-on:click="change1();" v-model="flg1">COMPANY</li>
+	<li v-on:click="change0(); colorA();" v-model="flg0" v-bind:class="{'a':isA}">MISSION</li>
+	<li v-on:click="change1(); colorB();" v-model="flg1" v-bind:class="{'a':isB}">COMPANY</li>
+	<li v-on:click="change2(); colorC();" v-model="flg2" v-bind:class="{'a':isC}">NEWS</li>
 </ul>
 
 <p v-if="flg">マウスオーバーしていないとき</p>
 <p v-if="flg0">MISSIONだよ</p>
 <p v-if="flg1">COMPANY</p>
+<p v-if="flg2">NEWS</p>
  
 
 
@@ -51,6 +62,7 @@
 
 <!-- JavaScript -->
 <script type="text/javascript">
+
 
 // 今が午前か午後かを表示するー比較演算子
 /*
@@ -124,6 +136,11 @@ function initial(){
 		data: {
 			flg:true,
 	 		flg0:false,
+	 		flg1:false,
+	 		flg2:false,
+	 	 	isA:false,
+	 	 	isB:false,
+	 	 	isC:false,
 		} ,
 		// クリック時に各プロパティ名をtrue or falseへ変更
 		methods: {
@@ -131,12 +148,29 @@ function initial(){
 				this.flg1 = false;
 				this.flg0 = true;
 				this.flg = false;
+				this.flg2 = false;
+				this.isA = true;
+				this.isB = false;
+				this.isC = false;
 			} ,
 			change1: function(){
 				this.flg0 = false;
 				this.flg1 = true;
 				this.flg = false;
-			}
+				this.flg2 = false;
+				this.isA = false;
+				this.isB = true;
+				this.isC = false;
+			} ,
+			change2: function(){
+				this.flg1 = false;
+				this.flg0 = false;
+				this.flg = false;
+				this.flg2 = true;
+				this.isA = false;
+				this.isB = false;
+				this.isC = true;
+			} 
 		}
 	})
 }
