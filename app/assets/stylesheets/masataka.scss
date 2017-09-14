@@ -86,3 +86,23 @@ p.sample4 {width:200px; height:60px; border: 1px solid black; overflow-y:auto;}
 .a {
   color: red;
 }
+
+
+/*-- スライドメニュー --*/
+
+body {
+    /*
+    position: relative;
+    left: 0;
+    */
+    overflow-x: hidden;
+}
+
+#slide_menu{
+    position: fixed;
+    top: 0;
+    left: -140px;
+    width: 140px;
+    height: 50%;
+    background: #E87272;
+}
