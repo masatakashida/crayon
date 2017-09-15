@@ -9,27 +9,27 @@
 
 
 <!--  プラグインを使わずにスライド（左から右へ）  -->
-<!-- スライドメニュー部分-->
-<nav id="slide_menu">
-    <ul>
-        <li><a>menu1</a></li>
-        <li><a href="#">menu2</a></li>
-        <li><a href="#">menu3</a></li>
-        <li><a href="#">menu4</a></li>
-        <li><a href="#">menu5</a></li>
-    </ul>
-</nav>
 
 <!--メニューを出すボタン-->
 <button id="button"><i class="fa fa-bars"></i> Menu(クリックするとメニュー画面が出てくる。)</button>
 
+<nav class="menu-sp" id="slide_menu">
+  <ul>
+  	<li>cssで画面の見えないところに</li>
+  	<li>配置して</li>
+  	<li></li>
+  	<li></li>
+  	<li></li>
+  </ul>
+</nav>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
-$(function(){
-var menu = $('#slide_menu'), // スライドインするメニューを指定
-    menuBtn = $('#button'), // メニューボタンを指定
-    body = $(document.body),     
+jQuery(function(){
+var menu = jQuery('#slide_menu'), // スライドインするメニューを指定
+    menuBtn = jQuery('#button'), // メニューボタンを指定
+    body = jQuery(document.body),     
     menuWidth = menu.outerWidth();                
      
     // メニューボタンをクリックした時の動き
