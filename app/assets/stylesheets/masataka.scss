@@ -80,7 +80,7 @@
 	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5)
 }
 
-p.sample4 {width:200px; height:60px; border: 1px solid black; overflow-y:auto;}
+p.sample4 {width:200px; height:70px; border: 1px solid black; overflow-y:auto;}
 
 
 .a {
@@ -105,4 +105,22 @@ body {
     width: 70%;
     height: 30%;
     background: #E87272;
+}
+
+
+.photo2 {
+  overflow:   hidden;
+}
+
+.photo2 img{
+    transition: 0.3s;
+}
+ 
+ 
+.photo2 img:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
 }
