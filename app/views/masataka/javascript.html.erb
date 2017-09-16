@@ -9,13 +9,8 @@
 
 
 
-<div class="photo2"><img src="/assets/11.jpg" alt="" width='200'></div>
- 
- 
 
 
-
-<img src="/assets/11.jpg" width='200' />
 <!--  プラグインを使わずにスライド（左から右へ）  -->
 <!--メニューを出すボタン-->
 <button id="button"><i class="fa fa-bars"></i> Menu(クリックするとメニュー画面が出てくる。)</button>
@@ -27,6 +22,7 @@
   	<li></li>
   </ul>
 </nav>
+
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -53,6 +49,9 @@ var menu = jQuery('#slide_menu'), // スライドインするメニューを指�
     });
 });    
 </script>
+
+
+<div class="photo2"><img src="/assets/11.jpg" alt="" width='200'></div>
 
 <!-- overflow-y -->
 <p class="sample4">
@@ -91,8 +90,6 @@ Content is clipped and scrolling is added only when necessary.
 
 
 <hr>
-<!-- クリックで変化 -->
-<div class="button-toggle" id="button-toggle" onclick="button()">&#9776;</div>
 
 
 <!-- ボタンクリック後に赤色に変わる -->
@@ -109,23 +106,6 @@ Content is clipped and scrolling is added only when necessary.
 
 <!-- JavaScript -->
 <script type="text/javascript">
-
-// 今が午前か午後かを表示するー比較演算子
-/*
-var now = new Date();
-var hour = now.getHours();
-
-if (hour < 12) {
-	window.alert('今は午前' + hour + '時です！');
-} else {
-	window.alert('今は午後' + hour + '時です！');
-};
-	*/
-// ボタン赤色に変化
-function effect(){
-	var button1 = document.getElementById("button1")
-	button1.style.backgroundColor = "red"
-};
 
 // 文言クリックでHTML,CSS変化
 function test(){
