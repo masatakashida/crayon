@@ -1,31 +1,31 @@
-set :deploy_to    ,'/home/deploy/crayon' # deploy先の設定
-# set :unicorn_pid  ,"#{shared_path}/tmp/pids/unicorn.pid" # unicorn pidの位置
-set :stage, :staging
-set :branch,  'develop'
+#set :deploy_to    ,'/home/deploy/crayon' # deploy先の設定
+###### set :unicorn_pid  ,"#{shared_path}/tmp/pids/unicorn.pid" # unicorn pidの位置
+#set :stage, :staging
+#set :branch,  'develop'
 
-server '160.16.238.74', user: 'deploy', roles: %w{web app batch api db}
+#server '160.16.238.74', user: 'deploy', roles: %w{web app batch api db}
 
 # linked to file
 #set :linked_files, %w{ config/database.yml }
-set :rails_env, 'staging'
-set :migration_role, 'db'
+#set :rails_env, 'staging'
+#set :migration_role, 'db'
 
 # ------------------------------------
 # unicorn_rails
 # ------------------------------------
 
-set :unicorn_pid, "#{shared_path}/tmp/pids/unicorn.pid"
+#set :unicorn_pid, "#{shared_path}/tmp/pids/unicorn.pid"
 
-namespace :deploy do
-  puts 'ーーーーーステージング環境の deployを開始しますーーーーー'
+#namespace :deploy do
+#  puts 'ーーーーーステージング環境の deployを開始しますーーーーー'
 
   # messageはここでputsする。
-  after :finished, :log_revision do
-    puts 'ーーーーーステージング環境の deployが完了しましたーーーーー'
-  end
-end
+#  after :finished, :log_revision do
+#    puts 'ーーーーーステージング環境の deployが完了しましたーーーーー'
+#  end
+#end
 
-
+#----------------------上記が必要な設定ファイル-------------------------------
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
