@@ -9,5 +9,5 @@ class MasatakaController < ApplicationController
 
   def html
   end
-
+ 
 end
