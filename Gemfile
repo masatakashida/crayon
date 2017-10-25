@@ -68,6 +68,8 @@ group :development do
   gem 'capistrano3-unicorn'
 end
 
+gem 'stripe'
+
 
 
 
