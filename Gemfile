@@ -69,6 +69,7 @@ group :development do
 end
 
 gem 'stripe'
+gem 'slack-notifier'
 
 
 
