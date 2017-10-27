@@ -1,10 +1,10 @@
 class ChargesController < ApplicationController
 
 
-	def new
+	def new1
 	end
 
-	def create
+	def create1
 	  # Amount in cents
 	  @amount = 500
 
@@ -29,10 +29,25 @@ class ChargesController < ApplicationController
 
 
 	# subscriptionのやつをここに実装する
-	def subscription_new
+	def new
 	end
 
-	def subscription
+	def create
+		# Set your secret key: remember to change this to your live secret key in production
+		# See your keys here: https://dashboard.stripe.com/account/apikeys
+		Stripe.api_key = "sk_test_btd1eRC1Pc3QpDUsloWc7YkS"
+
+		require "stripe"
+		Stripe.api_key = "sk_test_btd1eRC1Pc3QpDUsloWc7YkS"
+
+		Stripe::Plan.create(
+		  :amount => 3000,
+		  :interval => "month",
+		  :name => "サブスクリプション",
+		  :currency => "jpy",
+		  :id => "quartz-standard"
+		)
+
 		plan = Stripe::Plan.create(
 		  :name => "Basic Plan",
 		  :id => "basic-monthly",
@@ -40,6 +55,25 @@ class ChargesController < ApplicationController
 		  :currency => "usd",
 		  :amount => 0,
 		)
+
+		customer = Stripe::Customer.create(
+		  :email => "jenny.rosen@example.com",
+		)
+
+		Stripe::Subscription.create(
+		  :customer => customer.id,
+		  :items => [
+		    {
+		      :plan => "basic-monthly",
+		    },
+		  ],
+		)
+
+		notify_to_slack
+
+	rescue Stripe::CardError => e
+	  flash[:error] = e.message
+	  redirect_to new_charge_path
 	end
 
 
