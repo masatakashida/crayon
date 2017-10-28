@@ -40,6 +40,7 @@ class ChargesController < ApplicationController
 		require "stripe"
 		Stripe.api_key = "sk_test_btd1eRC1Pc3QpDUsloWc7YkS"
 
+=begin
 		Stripe::Plan.create(
 		  :amount => 3000,
 		  :interval => "month",
@@ -55,16 +56,18 @@ class ChargesController < ApplicationController
 		  :currency => "usd",
 		  :amount => 0,
 		)
+=end
 
 		customer = Stripe::Customer.create(
 		  :email => "jenny.rosen@example.com",
+		  :source  => params[:stripeToken]
 		)
 
 		Stripe::Subscription.create(
 		  :customer => customer.id,
 		  :items => [
 		    {
-		      :plan => "basic-monthly",
+		      :plan => "quartz-standard",
 		    },
 		  ],
 		)
