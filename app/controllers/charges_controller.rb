@@ -71,12 +71,14 @@ class ChargesController < ApplicationController
 		    },
 		  ],
 		)
-
+		# 月額課金申し込み成功
 		notify_to_slack
 
 	rescue Stripe::CardError => e
 	  flash[:error] = e.message
 	  redirect_to new_charge_path
+	  # 月額課金申し込み失敗
+	  notify_to_slack_sub
 	end
 
 
@@ -86,7 +88,22 @@ class ChargesController < ApplicationController
 	def text
     text = <<-EOC
 -----------------------------
-[#{Rails.env}] 新しい申し込みがありました。
+[#{Rails.env}] 月額課金の申し込み
+
+▼stripe_account_id
+▼メールアドレス
+▼名前
+▼金額
+#{@amount}円
+▼プラン
+    EOC
+    text
+  	end
+
+  	def text_sub
+    text = <<-EOC
+-----------------------------
+[#{Rails.env}] 引き落とし失敗
 
 ▼stripe_account_id
 ▼メールアドレス
@@ -99,9 +116,14 @@ class ChargesController < ApplicationController
   	end
 
   	def notify_to_slack
-    notifier_sub = Slack::Notifier.new('https://hooks.slack.com/services/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') 
-    notifier_sub.ping(text)
-  end
+	    notifier_sub = Slack::Notifier.new('https://hooks.slack.com/services/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') 
+	    notifier_sub.ping(text)
+  	end
+
+  	def notify_to_slack_sub
+	    notifier_sub = Slack::Notifier.new('https://hooks.slack.com/services/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') 
+	    notifier_sub.ping(text_sub)
+  	end
 
 
 end
